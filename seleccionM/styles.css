@@ -1,0 +1,111 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+
+/* Contenedor del plano */
+.mesas-container {
+    width: 80%;
+    height: 500px;
+    background-size: cover;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones de mesas */
+.mesas-botones {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.mesa-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mesa-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mesa-btn.selected {
+    border: 3px solid #007BFF;
+}
+
+/* Estado de las mesas */
+.mesa-btn.disponible {
+    background-color: #4CAF50;
+}
+
+.mesa-btn.ocupada {
+    background-color: #FF5252;
+}
+
+.mesa-btn.reservada {
+    background-color: #FFC107;
+}
+
+/* Botón continuar */
+button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.mesa-detalle {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.mesa-detalle h2 {
+    margin-bottom: 10px;
+}
+
+.mesa-detalle p {
+    margin: 5px 0;
+}
+    
